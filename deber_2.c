@@ -27,6 +27,7 @@ int main() {
             } while (notas[i][j] < 0 || notas[i][j] > 10);
         }
         printf("\n");
+
     }
     
     float promedio_estudiante[NUM_ESTUDIANTES] = {0};
@@ -51,3 +52,5 @@ int main() {
         printf("Estudiante %d: Promedio = %.2f  Nota mas alta = %d  Nota mas baja = %d\n",
                i + 1, promedio_estudiante[i], max_estudiante[i], min_estudiante[i]);
     }
+    }
+

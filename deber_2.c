@@ -27,7 +27,10 @@ int main() {
             } while (notas[i][j] < 0 || notas[i][j] > 10);
         }
         printf("\n");
+<<<<<<< HEAD
 
+=======
+>>>>>>> 52d1a0e (Agregamaos para ver la nota maxima y la minima y quien aprobo y quien no)
     }
     
     float promedio_estudiante[NUM_ESTUDIANTES] = {0};
@@ -52,7 +55,11 @@ int main() {
         printf("Estudiante %d: Promedio = %.2f  Nota mas alta = %d  Nota mas baja = %d\n",
                i + 1, promedio_estudiante[i], max_estudiante[i], min_estudiante[i]);
     }
+<<<<<<< HEAD
     printf("\n");
+=======
+     printf("\n");
+>>>>>>> 52d1a0e (Agregamaos para ver la nota maxima y la minima y quien aprobo y quien no)
     for (j = 0; j < NUM_ASIGNATURAS; j++) {
         int suma = 0;
         max_asignatura[j] = notas[0][j];
@@ -70,6 +77,7 @@ int main() {
         }
         promedio_asignatura[j] = (float)suma / NUM_ESTUDIANTES;
     }
+<<<<<<< HEAD
     printf(" PROMEDIO POR ASIGNATURA \n");
     for (j = 0; j < NUM_ASIGNATURAS; j++) {
         printf("%s: Promedio = %.2f | Mas alta = %d | Mas baja = %d\n",
@@ -82,3 +90,6 @@ int main() {
     
     
 
+=======
+    
+>>>>>>> 52d1a0e (Agregamaos para ver la nota maxima y la minima y quien aprobo y quien no)

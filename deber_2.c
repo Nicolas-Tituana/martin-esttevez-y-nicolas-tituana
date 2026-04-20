@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+// Variables que podemos cambiar
 #define NUM_ESTUDIANTES 5
 #define NUM_ASIGNATURAS 3
 #define NOTA_APROBATORIA 6
@@ -8,7 +8,10 @@ int main() {
     char materias[NUM_ASIGNATURAS][20] = {"Matematica", "Historia", "Lengua"};
     int notas[NUM_ESTUDIANTES][NUM_ASIGNATURAS];
     int i, j;
+    //Ingresamos los Vectores
 
+
+// para ingresar las notas de los estudiantes
     printf("INGRESO DE CALIFICACIONES \n\n");
     for (i = 0; i < NUM_ESTUDIANTES; i++) {
         printf("Estudiante %d:\n", i + 1);
@@ -27,12 +30,9 @@ int main() {
             } while (notas[i][j] < 0 || notas[i][j] > 10);
         }
         printf("\n");
-<<<<<<< HEAD
-
-=======
->>>>>>> 52d1a0e (Agregamaos para ver la nota maxima y la minima y quien aprobo y quien no)
     }
     
+    // Variables para calcular promedios, maximos, minimos, aprobados y reprobados
     float promedio_estudiante[NUM_ESTUDIANTES] = {0};
     float promedio_asignatura[NUM_ASIGNATURAS] = {0};
     int max_estudiante[NUM_ESTUDIANTES], min_estudiante[NUM_ESTUDIANTES];
@@ -41,11 +41,12 @@ int main() {
     
     printf("\n RESULTADOS \n\n");
     
+    // Calcular promedios, maximos y minimos por estudiante I= NUMERO E ESTUDIANTES J= NUMERO DE ASIGNATURAS COMO SOLO0 VEMOS PROMEIO J = 0
     for (i = 0; i < NUM_ESTUDIANTES; i++) {
         int suma = 0;
         max_estudiante[i] = notas[i][0];
         min_estudiante[i] = notas[i][0];
-        
+        // IMPRIMIMOS LA NOTA MAS ALTA Y LA MAS BAJA DE CADA ESTUDIANTE
         for (j = 0; j < NUM_ASIGNATURAS; j++) {
             suma += notas[i][j];
             if (notas[i][j] > max_estudiante[i]) max_estudiante[i] = notas[i][j];
@@ -55,11 +56,7 @@ int main() {
         printf("Estudiante %d: Promedio = %.2f  Nota mas alta = %d  Nota mas baja = %d\n",
                i + 1, promedio_estudiante[i], max_estudiante[i], min_estudiante[i]);
     }
-<<<<<<< HEAD
-    printf("\n");
-=======
      printf("\n");
->>>>>>> 52d1a0e (Agregamaos para ver la nota maxima y la minima y quien aprobo y quien no)
     for (j = 0; j < NUM_ASIGNATURAS; j++) {
         int suma = 0;
         max_asignatura[j] = notas[0][j];
@@ -77,19 +74,17 @@ int main() {
         }
         promedio_asignatura[j] = (float)suma / NUM_ESTUDIANTES;
     }
-<<<<<<< HEAD
+    // IMPRIMIMOS EL PROMEDIO POR ASIGNATURA, LA NOTA MAS ALTA Y LA MAS BAJA DE CADA ASIGNATURA
     printf(" PROMEDIO POR ASIGNATURA \n");
     for (j = 0; j < NUM_ASIGNATURAS; j++) {
         printf("%s: Promedio = %.2f | Mas alta = %d | Mas baja = %d\n",
                materias[j], promedio_asignatura[j], max_asignatura[j], min_asignatura[j]);
     }
+        printf("\n APROBADOS Y REPROBADOS POR ASIGNATURA \n");
+    for (j = 0; j < NUM_ASIGNATURAS; j++) {
+        printf("%s: Aprobados = %d | Reprobados = %d\n",
+               materias[j], aprobados[j], reprobados[j]);
+    }
     
-    printf("\n APROBADOS Y REPROBADOS POR ASIGNATURA \n");
     return 0;
 }
-    
-    
-
-=======
-    
->>>>>>> 52d1a0e (Agregamaos para ver la nota maxima y la minima y quien aprobo y quien no)

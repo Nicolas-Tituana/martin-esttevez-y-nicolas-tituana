@@ -70,6 +70,15 @@ int main() {
         }
         promedio_asignatura[j] = (float)suma / NUM_ESTUDIANTES;
     }
+    printf(" PROMEDIO POR ASIGNATURA \n");
+    for (j = 0; j < NUM_ASIGNATURAS; j++) {
+        printf("%s: Promedio = %.2f | Mas alta = %d | Mas baja = %d\n",
+               materias[j], promedio_asignatura[j], max_asignatura[j], min_asignatura[j]);
     }
+    
+    printf("\n APROBADOS Y REPROBADOS POR ASIGNATURA \n");
+    return 0;
+}
+    
     
 

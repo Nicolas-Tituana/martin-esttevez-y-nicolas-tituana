@@ -52,5 +52,24 @@ int main() {
         printf("Estudiante %d: Promedio = %.2f  Nota mas alta = %d  Nota mas baja = %d\n",
                i + 1, promedio_estudiante[i], max_estudiante[i], min_estudiante[i]);
     }
+    printf("\n");
+    for (j = 0; j < NUM_ASIGNATURAS; j++) {
+        int suma = 0;
+        max_asignatura[j] = notas[0][j];
+        min_asignatura[j] = notas[0][j];
+        
+        for (i = 0; i < NUM_ESTUDIANTES; i++) {
+            suma += notas[i][j];
+            if (notas[i][j] > max_asignatura[j]) max_asignatura[j] = notas[i][j];
+            if (notas[i][j] < min_asignatura[j]) min_asignatura[j] = notas[i][j];
+            if (notas[i][j] >= NOTA_APROBATORIA) {
+                aprobados[j]++;
+            } else {
+                reprobados[j]++;
+            }
+        }
+        promedio_asignatura[j] = (float)suma / NUM_ESTUDIANTES;
     }
+    }
+    
 
